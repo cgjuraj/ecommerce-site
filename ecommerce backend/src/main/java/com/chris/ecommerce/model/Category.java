@@ -1,11 +1,10 @@
 package com.chris.ecommerce.model;
 
-
-import jakarta.persistence.*;
-
+import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
 
 @Entity
-@Table(name = "category")
+@Table(name = "categories")
 public class Category {
 
     @Id
@@ -13,9 +12,9 @@ public class Category {
     private Integer id;
 
     @Column(name = "category_name")
-//    private @NotBlank String categoryName;
+    private @NotBlank String categoryName;
 
-    private String description;
+    private @NotBlank String description;
 
-    private String imageUrl;
+    private @NotBlank String imageUrl;
 }
